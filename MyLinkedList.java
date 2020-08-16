@@ -207,6 +207,25 @@ public class MyLinkedList {
         head = prev;
     }
 
+    public void Addone() {
+        String number = "";
+        Node temp = head;
+        while (temp != null) {
+            number = number + Integer.toString(temp.data);
+            temp = temp.next;
+        }
+        int n = Integer.parseInt(number);
+        String finalNumber = Integer.toString(n + 1);
+        // System.out.println(finalNumber);
+        char[] arr = finalNumber.toCharArray();
+        head = null;
+        for (char c : arr) {
+            // System.out.print(Integer.parseInt(String.valueOf(c)));
+            pushBack(Integer.parseInt(String.valueOf(c)));
+        }
+        System.out.println();
+    }
+
     // TODO: Driver Code
     // MyLinkedList l1 = new MyLinkedList();
     // l1.pushFront(2);
