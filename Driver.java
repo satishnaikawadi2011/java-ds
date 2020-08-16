@@ -6,17 +6,27 @@ import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
-        CircularSinglyLinkedList cl = new CircularSinglyLinkedList();
-        cl.addToEmpty(2);
-        // cl.insertAtIndex(0, 1);
-        // cl.insertAtIndex(1, 3);
-        // cl.insertAtIndex(3, 5);
-        cl.addBegin(1);
-        // cl.addLast(4);
-        // cl.addLast(16);
-        // cl.addBegin(0);
-        // cl.removeLast();
-        cl.print();
-        // System.out.println(cl.length());
+        // DoublyLinkedList dl = new DoublyLinkedList();
+        // // dl.addBegin(1);
+        // // dl.addLast(1);
+        // // dl.addBegin(3);
+        // // dl.addLast(3);
+        // dl.addLast(2);
+        // dl.addLast(3);
+        // dl.addLast(4);
+        // dl.addLast(6);
+        // dl.addBegin(1);
+        // dl.insertAt(4, 5);
+        // // dl.removeStart();
+        // try {
+        //     dl.removeAtIndex(3);
+        // } catch (Exception e) {
+        //     // TODO: handle exception
+        //     System.out.println(e);
+        }
+        // dl.removeLast();
+        // System.out.println(dl.length());
+        // dl.printReverse();
+        // dl.print();
     }
 }
