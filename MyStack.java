@@ -1,13 +1,13 @@
 package dataStructures;
 
-public class MyStack {
-    MyLinkedList li = new MyLinkedList();
+public class MyStack<E> {
+    private MyLinkedList<E> li = new MyLinkedList<>();
 
-    public void push(int data) {
+    public void push(E data) {
         li.pushBack(data);
     }
 
-    public int pop() throws Exception {
+    public E pop() throws Exception {
         if (li.isEmpty()) {
             throw new Exception("Popping from empty stack is not allowed");
         }
@@ -15,12 +15,16 @@ public class MyStack {
         return li.popBack();
     }
 
-    public int peek() throws Exception {
+    public E peek() throws Exception {
         if (li.isEmpty()) {
             throw new Exception("peeking from empty stack is not allowed");
         }
 
         return li.getLast();
+    }
+
+    public boolean isEmpty() {
+        return li.isEmpty();
     }
 
     // TODO: driver Code
