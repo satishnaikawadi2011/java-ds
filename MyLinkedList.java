@@ -7,7 +7,7 @@ public class MyLinkedList<E> {
 
     public Node<E> head;
 
-    static class Node<E> {
+    public static class Node<E> {
 
         E data;
         Node<E> next;
@@ -207,6 +207,29 @@ public class MyLinkedList<E> {
             current = next;
         }
         head = prev;
+    }
+
+    public void reverseByStack() {
+        MyStack<Node<E>> stack = new MyStack<>();
+        Node<E> temp = head;
+        while (temp != null) {
+            stack.push(temp);
+            temp = temp.next;
+        }
+        try {
+            Node<E> temp2 = stack.peek();
+            head = temp2;
+            stack.pop();
+            while (!stack.isEmpty()) {
+                temp2.next = stack.peek();
+                stack.pop();
+                temp2 = temp2.next;
+            }
+            temp2.next = null;
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e);
+        }
     }
     // TODO: For integer LIST
     // public void Addone() {
